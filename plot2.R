@@ -8,7 +8,7 @@ subSetData$Date <- as.Date(subSetData$Date, format = "%d/%m/%Y")
 datetime <- paste(subSetData$Date,subSetData$Time)
 subSetData$datetime <- as.POSIXct(datetime)
 
-plot(subSetData$datetime, subSetData$Global_active_power, type = "l", ylab = "Global Active Power (kilowatts)", xlab = "")
+plot(subSetData$datetime, Global_active_power, type = "l", ylab = "Global Active Power (kilowatts)", xlab = "")
 
 dev.copy(png, file="plot2.png", height = 480, width = 480)
 dev.off()
